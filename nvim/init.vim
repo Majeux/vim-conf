@@ -37,9 +37,9 @@ call plug#end()
 set pyxversion=3 " use python3
 let mapleader="\<SPACE>" "Map the leader key to SPACE
 
-source ./sub/editor.vim
-source ./sub/search.vim
-source ./sub/coc.vim
+source ~/.config/nvim/sub/editor.vim
+source ~/.config/nvim/sub/search.vim
+source ~/.config/nvim/sub/coc.vim
 
 " # Small plugin behaviours (not worth their own file)
 " ========================================================================
