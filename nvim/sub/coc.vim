@@ -27,7 +27,7 @@ set signcolumn=yes
 " <TAB>               Scroll through autocompletion
 " <C-SPACE>           Open autocomplete list
 " <CR>                Confirm completion while in list
-" d<LEFT>/d<RIGHT>    Navigate diagnostics (errors)
+" <space><LEFT>/<space><RIGHT>    Navigate diagnostics (errors)
 " gd/gt/gi/gr         GOTO definition/type-definition/implementation/references
 " K                   Show documentation in window
 " rn                  Rename current word
@@ -57,8 +57,8 @@ inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " d-> and d<- to navigate diagnostics (errors)
-nmap <silent> d<LEFT> <Plug>(coc-diagnostic-prev)
-nmap <silent> d<RIGHT> <Plug>(coc-diagnostic-next)
+nmap <silent> <leader><LEFT> <Plug>(coc-diagnostic-prev)
+nmap <silent> <leader><RIGHT> <Plug>(coc-diagnostic-next)
 
 " GOTOs
 nmap <silent> gd <Plug>(coc-definition)

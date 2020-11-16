@@ -65,6 +65,7 @@ let g:startify_list = [
 
 " # Misc Keybindings
 " ========================================================================
+vnoremap <C-c> "+y
 tnoremap <ESC> <C-w>:q!<CR> " allow escape in terminal mode
 
 " toggle between last buffer
