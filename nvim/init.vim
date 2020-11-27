@@ -13,6 +13,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Syntactic language support
 Plug 'sheerun/vim-polyglot' "language pack (syntax+indents)
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 " GUI Tools
 Plug 'simnalamburt/vim-mundo'
