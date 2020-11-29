@@ -57,3 +57,10 @@ nnoremap <TAB> >
 nnoremap <S-TAB> <
 nnoremap <TAB><TAB> >>
 nnoremap <S-TAB><S-TAB> <<
+
+" digraph
+" inoremap <C-\> <C-k>
+
+" <C-l> to enter latex symbols
+nnoremap <C-l> :call unicoder#start(0)<CR>
+inoremap <C-l> <Esc>:call unicoder#start(1)<CR>

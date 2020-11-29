@@ -38,23 +38,25 @@ set signcolumn=yes
 " <SPACE>d            List current diagnostics (errors)
 " ============================
 
-" <TAB> Scroll through autocompletion with 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" <TAB> Scroll through autocompletion with CR
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+inoremap <expr> <DOWN> pumvisible() ? "\<C-n>" : "\<DOWN>"
+inoremap <expr> <UP> pumvisible() ? "\<C-p>" : "\<UP>"
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " <C-SPACE> Open autocomplete list with 
 inoremap <silent><expr> <c-space> coc#refresh()
 
-" <CR> to confirm completion, `<C-g>u` means break undo chain at current position.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" <TAB> to confirm completion (also includes dependecies), `<C-g>u` means break undo chain at current position.
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<C-g>u\<TAB>"
 
 " d-> and d<- to navigate diagnostics (errors)
 nmap <silent> <leader><LEFT> <Plug>(coc-diagnostic-prev)

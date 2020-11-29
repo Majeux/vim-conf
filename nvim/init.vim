@@ -14,6 +14,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Syntactic language support
 Plug 'sheerun/vim-polyglot' "language pack (syntax+indents)
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'joom/latex-unicoder.vim'
 
 " GUI Tools
 Plug 'simnalamburt/vim-mundo'
@@ -27,6 +28,10 @@ Plug 'airblade/vim-rooter'
 
 " Nouns, Verbs, textobjects
 Plug 'tpope/vim-surround'
+" - Place surround: ys[text][char]. 	Ex: ysiw(
+" - Place surround line: yss[char].
+" - Change surrounded: cs[from][to]. 	Ex: cs'"
+" - delete surrounded: ds[del]. 		Ex: ds(
 Plug 'tpope/vim-repeat'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
@@ -68,6 +73,10 @@ let g:startify_list = [
 " ========================================================================
 vnoremap <C-c> "+y
 tnoremap <ESC> <C-w>:q!<CR> " allow escape in terminal mode
+
+" */# put current word in search, but stay on current word
+nnoremap # #N
+nnoremap * *N
 
 " toggle between last buffer
 nnoremap <leader><leader> <c-^>
