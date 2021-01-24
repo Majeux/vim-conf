@@ -1,0 +1,4 @@
+#!/bin/bash
+# retrieve vim files from config
+cp {~/.config/nvim,.}/init.vim
+cp -r {~/.config/nvim/sub,./}

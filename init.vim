@@ -40,6 +40,8 @@ call plug#end()
 
 " # Basic behaviour
 " ========================================================================
+:colorscheme solarized8_high
+
 set pyxversion=3 " use python3
 let mapleader="\<SPACE>" "Map the leader key to SPACE
 
@@ -71,8 +73,12 @@ let g:startify_list = [
 
 " # Misc Keybindings
 " ========================================================================
+" put contents of visual select in clipboard
 vnoremap <C-c> "+y
-tnoremap <ESC> <C-w>:q!<CR> " allow escape in terminal mode
+" automatically enter insert mode when entering terminal window
+autocmd TermOpen * startinsert
+" escape from insert mode into normal mode when in terminal
+tnoremap <ESC> <C-\><C-n> 
 
 " */# put current word in search, but stay on current word
 nnoremap # #N

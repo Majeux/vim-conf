@@ -1,0 +1,12 @@
+#!/bin/bash
+# backup old files
+BACKUP="$(date +%Y-%m-%d_%H:%M:%S)"
+
+mkdir -p ./backup/$BACKUP
+
+cp {~/.config/nvim,./backup/$BACKUP}/init.vim 
+cp -r {~/.config/nvim,./backup/$BACKUP}/sub
+
+# place new files
+cp {.,~/.config/nvim}/init.vim
+cp -r {./sub,~/.config/nvim/}
