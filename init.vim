@@ -40,8 +40,6 @@ call plug#end()
 
 " # Basic behaviour
 " ========================================================================
-:colorscheme solarized8_high
-
 set pyxversion=3 " use python3
 let mapleader="\<SPACE>" "Map the leader key to SPACE
 
@@ -96,3 +94,5 @@ nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
 "yank till end of line
 nnoremap Y y$
+
+colorscheme solarized8_high
